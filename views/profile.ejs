@@ -1,0 +1,37 @@
+<%- include("partials/header")-%>
+
+<div class="btn-group flex-wrap top-buttons" role="group" aria-label="Basic example">
+  <a class="btn btn-info btn-lg sign-in-button" href="/profile" role="button">My Profile</a>
+  <a class="btn btn-info btn-lg sign-in-button" href="/order" role="button">My Orders</a>
+  <a class="btn btn-info btn-lg sign-in-button" href="/cart" role="button">My Cart</a>
+  <a class="btn btn-info btn-lg sign-in-button" href="/register" role="button">Sign Out</a>
+</div>
+
+<h2 style="margin-top: 2rem; margin-bottom: 2rem;">Welcome to your Profile</h2>
+<strong>Your Id: </strong><%=email%>
+<%if(nation==="no"){%>
+<h4>Please enter your nationality: </h4>
+<form action="/profile" method="POST">
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="nationality" id="exampleRadios1" value="Indian" checked>
+        <label class="form-check-label" for="exampleRadios1">
+          Indian
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="nationality" id="exampleRadios2" value="Other">
+        <label class="form-check-label" for="exampleRadios2">
+          Other
+        </label>
+      </div>
+    <button type="submit" class="btn btn-info">Save and continue</button>
+</form>
+<%}else{%>
+  <br><div style="margin-bottom: 20rem;"><strong>Your nationality: </strong><%=nation%></div>
+  <%}%>
+
+
+
+
+
+<%- include("partials/footer")-%>

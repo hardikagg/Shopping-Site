@@ -1,0 +1,90 @@
+<%- include("partials/header")-%>
+
+
+<div class="btn-group flex-wrap top-buttons" role="group" aria-label="Basic example">
+  <a class="btn btn-info btn-lg sign-in-button" href="/profile" role="button">My Profile</a>
+  <a class="btn btn-info btn-lg sign-in-button" href="/order" role="button">My Orders</a>
+  <a class="btn btn-info btn-lg sign-in-button" href="/cart" role="button">My Cart</a>
+  <a class="btn btn-info btn-lg sign-in-button" href="/register" role="button"><%=login%></a>
+</div>
+
+
+
+<div class="slider">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active">
+        <div class="img1">
+        <!-- <img src="/images/1.jpg" class="d-block slide-img" alt="1"> -->
+      </div></div>
+      <div class="carousel-item">
+        <div class="img2">
+        <!-- <img src="/images/2.png" class="d-block slide-img" alt="2"> -->
+      </div></div>
+      <div class="carousel-item">
+        <div class="img3">
+        <!-- <img src="/images/3.jpg" class="d-block slide-img" alt="3"> -->
+      </div></div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </a>
+  </div>
+</div> 
+
+
+
+
+
+<section class="section-index-2">
+<div class="container">
+  <div class="row justify-content-center">
+    
+    <div class="col-sm-12 col-md-6 col-lg-3" style="margin-right: 4rem; margin-left: 1rem; margin-bottom: 2rem;">
+      <img src="/images/main.png" style="width: 18rem;">
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-8">
+      <h3><strong>Welcome to the world of Welding, Safety and Measuring equipments.</strong></h3>
+      <h6>Royal Sales Corporation acts like a heaven for industrialists and factory owners.</h6>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<section class="section-index-3">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-6 col-lg-8">
+        <h3><strong>Yes, We deliver internationally!</strong></h3>
+        <h6>Royal Sales Corporation deals with customers from both India and abroad.</h6>
+      </div>
+      <div class="card forex col-sm-12 col-md-6 col-lg-3" style="width: 18rem;">
+        <div class="card-body">
+          
+          
+          <p>On <%= date%>,
+            1 <%=curr%> is equal to <%=converted%> INR</p>
+        </div>
+        <small class="text-muted">DATA FROM ALPHAVANTAGE.COM</small>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section class="section-index-4">
+    <h3><em>PRESENTING</em></h3>
+    <strong><h2>Online order placing facility</h2></strong>
+    <p>Now on our website, you can order online too!!</p>
+  </section>
+
+
+<%- include("partials/footer")-%>

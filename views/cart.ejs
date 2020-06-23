@@ -1,0 +1,74 @@
+<%- include("partials/header")-%>
+<div class="btn-group flex-wrap top-buttons" role="group" aria-label="Basic example">
+    <a class="btn btn-info btn-lg sign-in-button" href="/profile" role="button">My Profile</a>
+    <a class="btn btn-info btn-lg sign-in-button" href="/order" role="button">My Orders</a>
+    <a class="btn btn-info btn-lg sign-in-button" href="/cart" role="button">My Cart</a>
+    <a class="btn btn-info btn-lg sign-in-button" href="/register" role="button"><%=login%></a>
+</div>
+<%if(products){%>
+    <h1 style="margin-top: 2rem;">Your Cart</h1> 
+       
+    <table class="table table-hover table-sm cart-table table-bordered">
+        
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">More Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% products.forEach(product => { %>
+                    <tr>
+                <td> <strong><%=product.item.name%></strong></td>
+                <td><%=product.qty%></td>
+                <td><%if(currency==="INR"){%>Rs. <%=product.price%>.00<%}else{%>$ <%=product.priceDollar%><%}%></td>
+                        <td>
+                            <a href="/reduce/<%=product.item._id%>" style="color: black;" class="btn btn-info">&nbsp;Reduce by 1</a></li>
+                    <a href="/remove/<%=product.item._id%>" style="color: black;" class="btn btn-info">&nbsp;Remove All</a></li>
+    </td>
+</tr>
+
+    <%});%>
+    
+    <tr>
+        <td></td>
+        <th>TOTAL AMOUNT: </th>
+        <th><%if(currency==="INR"){%>Rs. <%=totalPrice%>.00<%}else{%>$ <%=totalPrice%><%}%></th>
+        <td></td>
+    </tr>
+    </tbody>
+    </table>
+    
+
+    <div class="row">
+        <hr>
+        <div class="col-sm-6 col-md-6 col-lg-4">
+            <form action="/cart" method="POST">
+                <div class="form-group">
+                  <label for="formGroupExampleInput">Name: </label>
+                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name" name="name">
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Address</label>
+                  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Address" name="address">
+                </div><div>
+                <a href="/checkout" type="button" class="btn btn-info disabled" style="margin-bottom: 1rem;">Checkout and Pay Now</a>&nbsp;
+                <button type="submit" class="btn btn-info" style="margin-bottom: 1rem;">CheckOut and Pay at Delivery</button></div>
+              </form>
+        </div>
+    </div>
+    <%}else{%>
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-4 col-md-offset-3 col-sm-offset-3 empty-cart">
+            <h2>Your cart is empty. Order now!! <a href="/products" role="button" class="btn btn-info">Go to
+                    Products</a>
+            </h2>
+        </div>
+    </div>
+    <%}%>
+
+
+
+<%- include("partials/footer")-%>

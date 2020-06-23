@@ -1,0 +1,36 @@
+<%- include("partials/header")-%>
+<div class="btn-group flex-wrap top-buttons" role="group" aria-label="Basic example">
+    <a class="btn btn-info btn-lg sign-in-button" href="/profile" role="button">My Profile</a>
+    <a class="btn btn-info btn-lg sign-in-button" href="/order" role="button">My Orders</a>
+    <a class="btn btn-info btn-lg sign-in-button" href="/cart" role="button">My Cart</a>
+    <a class="btn btn-info btn-lg sign-in-button" href="/register" role="button"><%=login%></a>
+</div>
+<h1 class="product-head">Our Products</h1>
+<a href="/products/welding">
+<section class="welding">
+    
+        <div>
+            <h1 class="subgroups">Welding Accessories</h1>
+        </div>
+    </section></a>
+    <a href="/products/safety">
+<section class="safety">
+    
+        <div>
+            <h1 class="subgroups">
+                Safety Equipments
+            </h1>
+        </div>
+    </section></a>
+    <a href="/products/measuring">
+    <section class="measuring">
+    
+        <div>
+            <h1 class="subgroups">
+                Measuring Instruments
+            </h1>
+        </div>
+    </section></a>
+
+
+<%- include("partials/footer")-%>

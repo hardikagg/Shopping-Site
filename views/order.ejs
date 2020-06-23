@@ -1,0 +1,41 @@
+<%- include("partials/header")-%>
+<div class="btn-group flex-wrap top-buttons" role="group" aria-label="Basic example">
+    <a class="btn btn-info btn-lg sign-in-button" href="/profile" role="button">My Profile</a>
+    <a class="btn btn-info btn-lg sign-in-button" href="/order" role="button">My Orders</a>
+    <a class="btn btn-info btn-lg sign-in-button" href="/cart" role="button">My Cart</a>
+    <a class="btn btn-info btn-lg sign-in-button" href="/register" role="button">Sign Out</a>
+</div>
+<h2 style="margin-top: 2rem;">My Orders</h2>
+<div class="row">
+   
+    
+        
+        <%orders.forEach(order => { %>
+            <div class="col-md-8 col-md-offset-2">
+        <table class="table table-hover table-sm cart-table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <%(order.items).forEach(element => { %>
+                    <tr>
+                <td><%=element.item.name%></td>
+                <td><%=element.qty%></td>
+                <td><%if(curr==="INR"){%>Rs. <%=element.price%><%}else{%>$ <%=element.priceDollar%><%}%></td></tr>
+                    <%});%>
+                    <tr><td></td>
+                        <td>Total: </td>
+                <td><%if(curr==="INR"){%>Rs. <%=order.cart.totalPrice%><%}else{%>$ <%=order.cart.totalPriceDollar%><%}%></td></tr>
+                </tbody>
+            </table>
+        </div>
+        <%});%>
+    </div>
+
+
+    <%- include("partials/footer")-%>

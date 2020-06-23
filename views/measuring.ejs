@@ -1,0 +1,49 @@
+<%- include("partials/header")-%>
+
+<div class="btn-group flex-wrap top-buttons" role="group" aria-label="Basic example">
+    <a class="btn btn-info btn-lg sign-in-button" href="/products" role="button">Back to Products</a></div>
+    <div class="btn-group flex-wrap top-buttons" role="group" aria-label="Basic example">
+    <a class="btn btn-info btn-lg sign-in-button" href="/products/safety" role="button">Safety Equipments</a>
+    <a class="btn btn-info btn-lg sign-in-button" href="/products/welding" role="button">Welding Accessories</a></div>
+    <div class="btn-group flex-wrap" role="group" aria-label="Basic example">
+    <%if(signedIn==="false"){%>
+
+    <%if(symbol==="INR"){%>
+    <form action="/products/welding" method="POST">
+        <button class="btn btn-info btn-lg sign-in-button" type="submit" name="currSymbol" value="USD">Show price in USD</button>
+    </form>
+    <%}else{%>
+    <form action="/products/welding" method="POST">
+        <button class="btn btn-info btn-lg sign-in-button" type="submit" name="currSymbol" value="INR">Show price in INR</button>
+    </form>
+    <%}%>
+        <%}%></div>
+        <div class="btn-group flex-wrap" role="group" aria-label="Basic example">
+    <a class="btn btn-info btn-lg sign-in-button" href="/profile" role="button">My Profile</a>
+    <a class="btn btn-info btn-lg sign-in-button" href="/order" role="button">My Orders</a>
+    <a class="btn btn-info btn-lg sign-in-button" href="/cart" role="button">My Cart</a>
+    <a class="btn btn-info btn-lg sign-in-button" href="/register" role="button"><%=login%></a>
+</div>
+
+<h1 class="subgroup-heading"><hr>Measuring Instruments</h1><hr>
+<div class="row row-cols-1 row-cols-lg-3 row-cols-md-2">
+    <% for(var i=12; i<18; i++) { %>
+        <div class="col mb-4">
+            <div class="card item-card">
+                <img src="<%=products[i].image%>" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><%=products[i].name%></h5>
+                    <p class="card-text"><%=products[i].description%></p>
+                    <strong>Price:<%if(symbol==="INR"){%> Rs. <%=products[i].price%>.00<%}else{%> $ <%=products[i].priceDollar%><%}%> per <%=products[i].unit%></strong>
+                    <hr>
+                    <div>
+                        
+                        <a class="btn btn-info" role="button" type="submit" href="/add-to-cart/<%=products[i].subGroup%>/<%=products[i]._id%>">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <%}%>
+</div>
+
+<%- include("partials/footer")-%>

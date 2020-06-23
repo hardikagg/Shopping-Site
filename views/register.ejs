@@ -1,0 +1,32 @@
+<%- include('partials/header') %>
+
+
+<div class="container" style="margin-bottom: 4rem; padding-top: 4rem;">
+    
+        <div class="card mx-auto card-manual" style="background-color: #84a9ac;">
+          <div class="card-body">
+            <h1>New to Royal Sales? Register</h1>
+            <form action="/register" method="POST">
+              <div class="form-group login-form">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" name="username">
+              </div>
+              <div class="form-group login-form">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password">
+              </div>
+              <button type="submit" class="btn btn-dark">Register</button>
+            </form>
+            <hr>
+            <a class="btn btn-block btn-social btn-google" href="/auth/google" role="button">
+              <i class="fab fa-google"></i>
+              Sign Up with Google
+            </a>
+          </div>
+        </div>
+      
+</div>
+<div class="card mx-auto card-manual"  style="background-color: #204051; color: white; margin-top: -3rem;"><div class="card-body"> Already have an account?  <a href="/login">Sign In</a></div>
+</div>
+
+<%- include('partials/footer') %>
