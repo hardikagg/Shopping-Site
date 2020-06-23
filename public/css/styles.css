@@ -1,0 +1,375 @@
+body {
+    background-color: #e7dfd5;
+    margin: 4rem 0 0 0;
+    min-height: 100%;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a {
+    color: white;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+
+/*-----------------------Navigation bar-----------------------------*/
+.links {
+    margin-left: 62%;
+}
+
+.unique-link {
+    margin: 0 1rem 0 1rem;
+}
+
+.dropdown-link {
+    color: rgba(255, 255, 255, .5);
+}
+
+.icon {
+    color: white;
+    margin: 0.5rem 2rem 0.5rem 1rem;
+}
+
+/*--------------------------Image Slider-----------------------------*/
+.slide-img {
+    height: 30rem;
+
+}
+
+.slider {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.carousel-inner {
+    height: 60vh;
+
+}
+
+.carousel-item {
+    height: 100%;
+}
+
+.img1 {
+    background-image: url('../images/1.jpg');
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: local !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+.img2 {
+    background-image: url('../images/2.png');
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: local !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+.img3 {
+    background-image: url('../images/3.jpg');
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: local !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+
+/*---------------------------Foreign Currency Converter--------------*/
+
+.forex {
+    border-style: solid;
+    border-width: 2px;
+    padding: 10px;
+    background-color: #204051;
+    color: white;
+    /* position: relative;
+    left: 63rem; */
+}
+
+.currency-buttons {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*--------------------------Products Page----------------------------*/
+.welding {
+    background-color: #84a9ac;
+    text-align: center;
+    height: 20rem;
+}
+
+.safety {
+    background-color: #3b6978;
+    text-align: center;
+    height: 20rem;
+}
+
+.measuring {
+    background-color: #204051;
+    text-align: center;
+    height: 20rem;
+}
+
+.subgroups {
+    color: white;
+    padding-top: 10rem;
+}
+
+.product-head {
+    font-size: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/*---------------------------Sign In button----------------------------*/
+
+.sign-in-button {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    
+}
+
+
+/*--------------------------Home Page----------------------------------*/
+
+.section-index-2 {
+    background-color: #84a9ac;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    margin-bottom: 2rem;
+}
+
+.section-index-3 {
+    background-color: #3B6978;
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.section-index-4{
+    background-color: #204051;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    color: white;
+    text-align: center;
+    
+}
+
+
+/*-------------------------About Us-------------------------------------*/
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+}
+
+.about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #84a9ac;
+    color: white;
+    margin-top: 2rem;
+}
+
+.about-2 {
+    padding: 50px;
+    text-align: center;
+    background-color: #3b6978;
+    color: white;
+}
+
+.about-3 {
+    padding: 50px;
+    text-align: center;
+    background-color: #204051;
+    color: white;
+}
+
+
+.container::after,
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.title {
+    color: grey;
+}
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+}
+
+/*------------------------------Footer-------------------------*/
+footer {
+    background-color: #84a9ac;
+    margin-top: 30px;
+    height: 10rem;
+    color: white;
+    text-align: center;
+    
+}
+
+.info-footer {
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+.copyright {
+    padding-bottom: 2rem;
+}
+
+/*------------------------------Contact------------------------*/
+.contact {
+    background-color: #3b6978;
+    height: 23rem;
+    color: white;
+    text-align: center;
+    font-size: x-large;
+    padding: 5rem 0 0 0;
+
+}
+
+.faq {
+    background-color: #84a9ac;
+    font-size: large;
+    color: black;
+    padding-left: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    line-height: 40px;
+    margin-top: 2rem;
+
+}
+
+.faq h1 {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.faq strong {
+    color: black;
+}
+
+.faq p {
+    padding-left: 2rem;
+}
+
+@media (max-width: 700px) {
+    .faq {
+        text-align: center;
+        padding: 2rem 1rem 2rem 1rem;
+    }
+}
+
+.address-contact{
+    background-color: #204051;
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem 4rem 2rem;
+
+}
+
+/*----------------------------Login------------------------*/
+
+
+  .login-form{
+      text-align: left;
+      padding-right: 2rem;
+      
+  }
+  .card-manual{
+      width: 25rem;
+      
+  }
+
+  /*--------------------------Measuring Products-------------------------------*/
+   .measuringlist img{
+      width: 20rem;
+      height: 20rem;
+  } 
+
+  /*---------------------------Products SubGroups----------------------------*/
+  .item-card{
+      margin: 2rem 2rem 0 2rem;
+  }
+
+  .subgroup-heading{
+      color: #204051;
+      margin-top: 3rem;
+      text-align: center;
+  }
+
+  /*---------------------------Cart-------------------------------------------*/
+  .empty-cart{
+      margin: 2rem 2rem 20rem 0;
+  }
+
+  .cart-table{
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+     
+  }
+  table.table-bordered{
+    border:1px solid black;
+    margin-top:20px;
+  }
+table.table-bordered > thead > tr > th{
+    border:1px solid black;
+}
+ table.table-bordered > tbody > tr > td{
+    border:1px solid black;
+}
+table.table-bordered > tbody > tr > th{
+    border:1px solid black;
+} 
+
+/*---------------------------------Button Group-------------------------*/
+.top-buttons{
+    padding-top: 2.5rem;
+}
